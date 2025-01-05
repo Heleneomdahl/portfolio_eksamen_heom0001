@@ -111,19 +111,28 @@ nav {
   text-align: end;
 }
 
-.menu-hjem.active {
-  color: var(--primary);
+/* Styling for aktivt link */
+.menu a.active {
+  color: var(--primary); /* Rød tekst */
+  font-weight: bold; /* Fremhæv aktiv side */
+  text-decoration: underline; /* Understreget aktiv side */
 }
-.menu-portfolio.active {
-  color: var(--primary);
-}
-.menu-om.active {
-  color: var(--primary);
+
+/* Standard styling for links */
+.menu a {
+  color: var(--quarternary); /* Sort tekst som standard */
+  text-decoration: none;
 }
 
 .menu a:hover {
-  color: var(--primary);
-  text-decoration: underline;
+  color: var(--primary); /* Skift til rød ved hover */
+}
+
+@media screen and (max-width: 900px) {
+  .menu a.active {
+    color: var(--primary);
+    font-size: 1.2rem; /* For eksempel større tekst */
+  }
 }
 
 .burger {
@@ -188,6 +197,76 @@ nav {
 @media screen and (min-width: 900px) {
   .logo img {
     width: 40px;
-    margin-right: 11rem;
+    margin-right: 18rem;
+  }
+}
+
+/* Skjuler submenuen som standard */
+.menu .submenu {
+  display: none; /* Skjul submenu som standard */
+  position: absolute; /* Sørger for, at den placeres relativt til forælderen */
+  top: 100%; /* Placer submenu lige under Portfolio */
+  left: 0; /* Placer submenu lige under forælderens venstre kant */
+  background-color: var(--secondary); /* Baggrundsfarve */
+  padding: 0;
+  list-style-type: none;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  width: max-content; /* Sørger for, at submenu kun strækker sig så langt som dens indhold */
+}
+
+/* Vis submenuen, når musen er over Portfolio */
+.menu-portfolio:hover .submenu {
+  display: block;
+}
+
+/* For desktop */
+@media screen and (min-width: 900px) {
+  .menu-portfolio {
+    position: relative; /* Sørger for, at submenuen er placeret i forhold til Portfolio */
+  }
+
+  .submenu {
+    text-align: right; /* Justerer hele submenuen til højre */
+  }
+
+  .submenu li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .submenu li a {
+    text-align: right; /* Sørger for, at alle links står til højre */
+  }
+}
+
+/* For mobil */
+@media screen and (max-width: 900px) {
+  .menu .submenu {
+    display: none; /* Skjul submenu som standard */
+    position: relative; /* Sørger for, at den placeres relativt til Portfolio */
+    top: 100%; /* Læg den lige under Portfolio */
+    left: 0; /* Sørger for, at den starter ved venstre kant af Portfolio */
+    width: 100%; /* Gør den bred nok til at fylde skærmen, hvis ønsket */
+    background-color: var(--secondary); /* Ensartet baggrund */
+    text-align: center; /* Centrerer teksten */
+    padding: 0; /* Fjern unødvendig padding */
+  }
+
+  /* Vis submenuen, når musen er over Portfolio */
+  .menu-portfolio:hover .submenu {
+    display: block; /* Vis submenuen */
+  }
+
+  .menu-portfolio {
+    position: relative; /* Sørger for, at dropdown placeres korrekt */
+  }
+
+  .submenu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--quarternary); /* Justér tekstfarven */
+    background-color: var(--secondary); /* Matchende baggrundsfarve */
   }
 }

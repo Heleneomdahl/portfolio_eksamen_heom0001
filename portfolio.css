@@ -1,0 +1,53 @@
+/* fire projekter */
+.billede_portfolio {
+  height: 180px;
+  width: 100%;
+  border: solid rgb(255, 255, 255) 0.5px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+@media screen and (min-width: 600px) {
+  .portfolio_flex {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+/* .portfolio_flex {
+  align-self: end;
+} */
+
+.to_billeder {
+  display: flex;
+  gap: 10px;
+  margin-top: 2rem;
+}
+
+.p_portfolio {
+  text-align: end;
+}
+
+.tekst_portfolio {
+  text-align: start;
+}
+
+.to_billeder_1,
+.to_billeder_2 {
+  display: flex;
+}
+
+.boks_portfolio {
+  position: relative;
+  margin: 10px;
+}
+
+.to_billeder_1 .boks_portfolio.hovered .billede_portfolio,
+.to_billeder_2 .boks_portfolio.hovered .billede_portfolio {
+  opacity: 1;
+}
+
+.billede_portfolio.fade-out {
+  opacity: 0.3;
+}
