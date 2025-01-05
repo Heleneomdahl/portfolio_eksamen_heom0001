@@ -25,7 +25,7 @@ html {
   --size-l: 20px;
   --size-xl: 25px;
   --size-xxl: 30px;
-  --size-xxxl: 50px;
+  --size-xxxl: 40px;
 }
 
 main {
@@ -35,8 +35,8 @@ main {
 
 @media screen and (min-width: 600px) {
   main {
-    max-width: 1300px;
-    margin: var(--space-m) auto;
+    margin-left: var(--space-m);
+    margin-right: var(--space-m);
   }
 }
 
@@ -111,8 +111,19 @@ nav {
   text-align: end;
 }
 
+.menu-hjem.active {
+  color: var(--primary);
+}
+.menu-portfolio.active {
+  color: var(--primary);
+}
+.menu-om.active {
+  color: var(--primary);
+}
+
 .menu a:hover {
-  color: #ff0000;
+  color: var(--primary);
+  text-decoration: underline;
 }
 
 .burger {
@@ -131,7 +142,7 @@ nav {
 .burger {
   display: none;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .menu {
     display: none;
   }
@@ -155,7 +166,7 @@ nav {
 
   nav.active .menu {
     display: block;
-    background-color: #ffffff;
+    background-color: var(--secondary);
     position: absolute;
     top: 94px;
     left: 0;
@@ -173,9 +184,10 @@ nav {
   }
 }
 
-@media screen and (min-width: 600px) {
+/* menuens tekst forbliver centreret når det er desktop */
+@media screen and (min-width: 900px) {
   .logo img {
     width: 40px;
-    margin-right: 18rem;
+    margin-right: 11rem;
   }
 }

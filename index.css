@@ -63,7 +63,7 @@ img {
     grid-column: 4/5;
     grid-row: 1/2;
     text-align: end;
-    font-size: var(--size-xxl);
+    font-size: var(--size-xxxl);
     align-self: center; /* oppe eller nede i boksen*/
   }
 
