@@ -28,7 +28,7 @@ html {
   --size-xxxl: 40px;
 }
 
-main {
+/* main {
   margin-left: var(--space-sm);
   margin-right: var(--space-sm);
 }
@@ -38,7 +38,7 @@ main {
     margin-left: var(--space-m);
     margin-right: var(--space-m);
   }
-}
+} */
 
 a {
   color: var(--quarternary);
@@ -64,6 +64,7 @@ header {
   align-items: center;
   padding: 20px;
   background-color: var(--secondary);
+  z-index: 1;
 }
 
 .logo img {
@@ -114,7 +115,6 @@ nav {
 /* Styling for aktivt link */
 .menu a.active {
   color: var(--primary); /* Rød tekst */
-  font-weight: bold; /* Fremhæv aktiv side */
   text-decoration: underline; /* Understreget aktiv side */
 }
 
