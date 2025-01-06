@@ -2,6 +2,18 @@ img {
   width: 100%;
 }
 
+main {
+  margin-left: var(--space-sm);
+  margin-right: var(--space-sm);
+}
+
+@media screen and (min-width: 600px) {
+  main {
+    margin-left: var(--space-m);
+    margin-right: var(--space-m);
+  }
+}
+
 /* overskriften */
 .overskrift {
   max-width: 1000px;
@@ -47,8 +59,9 @@ img {
 }
 
 .overskrift {
-  grid-column: 1/5;
+  grid-column: 1/4;
   grid-row: 3/4;
+  justify-self: start;
   align-self: start;
 }
 
@@ -56,7 +69,7 @@ img {
   .grid_hjem {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 2fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
   }
   .emner_hjem {
     justify-self: end;
@@ -95,7 +108,7 @@ img {
   .overskrift {
     grid-column: 1/4;
     grid-row: 2/4;
-    max-width: 1000px;
+    margin-top: -2rem;
   }
 }
 

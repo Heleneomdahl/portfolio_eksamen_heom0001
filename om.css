@@ -40,22 +40,38 @@ p {
   margin-top: -3rem;
 }
 
-.grid_tekst_billede {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-}
-.ansigt {
-  justify-self: end;
-  margin-left: var(--space-sm);
-  margin-right: var(--space-sm);
+@media screen and (max-width: 700px) {
+  .ansigt {
+    margin-top: 2rem;
+    margin-right: var(--space-sm);
+    max-width: 250px;
+    position: absolute;
+    right: 0;
+  }
+
+  .hår {
+    max-width: 350px;
+    padding-top: 21rem;
+    padding-bottom: 2rem;
+    margin-left: var(--space-sm);
+    margin-right: var(--space-sm);
+  }
 }
 
-.hår {
-  max-width: 350px;
-  padding-top: 5rem;
-  padding-bottom: 2rem;
-  margin-left: var(--space-sm);
-  margin-right: var(--space-sm);
+.firkant {
+  width: 85%; /* Bredde på firkanten */
+  height: 620px; /* Højde på firkanten */
+  border: 2px solid black; /* Sort kant med 2px tykkelse */
+  background-color: transparent; /* Ingen fyld */
+  position: absolute;
+  margin-top: -45.5rem;
+  margin-left: var(--space-l);
+  margin-right: var(--space-xl);
+}
+
+.info_om {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .billede_tekst {
@@ -146,11 +162,34 @@ p {
   .lille_billede {
     display: none;
   }
+  .grid_tekst_billede {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+  }
 }
 
 @media screen and (min-width: 700px) {
   .lottiefile_mobil {
     display: none;
+  }
+}
+
+/* gør udtræksskærmen pæn i formatet ved lottiefilen */
+@media (min-width: 500px) and (max-width: 700px) {
+  .streg {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 800px) {
+  .streg {
+    margin-bottom: -5rem;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+  .streg {
+    margin-bottom: -4rem;
   }
 }
 
@@ -171,7 +210,7 @@ p {
   }
   .grid_om {
     display: grid;
-    grid-template-columns: 10fr 10fr 1fr 1fr;
+    grid-template-columns: 10fr 10fr 2fr 1fr;
   }
   .about {
     margin-bottom: 5rem;
@@ -182,6 +221,39 @@ p {
     font-size: var(--size-s);
     margin: 0;
   }
+  .grid_1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ansigt {
+    max-width: 400px;
+    justify-self: center;
+  }
+
+  .hår {
+    max-width: 400px;
+    justify-self: center;
+  }
+
+  .kompetencer {
+    margin-top: 10rem;
+    margin-right: 10rem;
+  }
+
+  .intro_om {
+    align-self: center;
+    margin-left: 10rem;
+    margin-top: 4rem;
+  }
+
+  .firkant {
+    max-height: 1550px;
+    max-width: 1150px;
+    margin-top: -32rem;
+    position: absolute;
+  }
+
   .kontakt {
     max-width: 600px;
     margin: 0 auto;
@@ -194,5 +266,13 @@ p {
     max-width: 300px;
     margin: 0 auto;
     margin-top: -1rem;
+  }
+  .cv_tekst {
+    max-width: 600px;
+  }
+  .sko {
+    max-width: 200px;
+    justify-self: end;
+    align-self: end;
   }
 }

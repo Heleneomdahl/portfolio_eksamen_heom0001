@@ -28,18 +28,6 @@ html {
   --size-xxxl: 40px;
 }
 
-/* main {
-  margin-left: var(--space-sm);
-  margin-right: var(--space-sm);
-}
-
-@media screen and (min-width: 600px) {
-  main {
-    margin-left: var(--space-m);
-    margin-right: var(--space-m);
-  }
-} */
-
 a {
   color: var(--quarternary);
   text-decoration: none;
@@ -115,7 +103,6 @@ nav {
 /* Styling for aktivt link */
 .menu a.active {
   color: var(--primary); /* Rød tekst */
-  text-decoration: underline; /* Understreget aktiv side */
 }
 
 /* Standard styling for links */
@@ -126,6 +113,7 @@ nav {
 
 .menu a:hover {
   color: var(--primary); /* Skift til rød ved hover */
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 900px) {
